@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using BookStore.ModelsHelpers;
 
 namespace BookStore.Repository.Interfaces
 {
@@ -16,7 +16,7 @@ namespace BookStore.Repository.Interfaces
         //get list of a model as author,book,category ...
         IEnumerable<TEntity> GetAll();
 
-        //get list of a model with parametres using lambda expression also delegate func => as author,book,category ... 
+        //get list of a model with parametres using lambda expression also delegate func => as author,book,category ...  also add paggination
         IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> filter = null, string includeProperties = null, Page page = null);
 
         //add method

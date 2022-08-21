@@ -1,12 +1,10 @@
-﻿using BookStore.Repository.Interfaces;
+﻿using BookStore.ModelsHelpers;
+using BookStore.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 using System.Linq;
-using System.Text;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using BookStore.ModelsHelpers;  
+using System.Linq.Expressions;
 
 namespace BookStore.Repository.Implementations
 {
@@ -64,6 +62,7 @@ namespace BookStore.Repository.Implementations
 
             if (!String.IsNullOrEmpty(includeProperties))
             {
+                // for get other properities of author category
                 string[] propertys = includeProperties.Split(",", StringSplitOptions.RemoveEmptyEntries);
                 foreach (string property in propertys)
                 {
