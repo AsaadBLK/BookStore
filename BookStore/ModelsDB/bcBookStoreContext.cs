@@ -21,6 +21,8 @@ namespace BookStore.ModelsDB
         {
         }
 
+
+        // ce sont des collections pour les utiliser au ajout/suppression/modification
         public virtual DbSet<Author> Author { get; set; }
         public virtual DbSet<Book> Book { get; set; }
         public virtual DbSet<Category> Category { get; set; }
