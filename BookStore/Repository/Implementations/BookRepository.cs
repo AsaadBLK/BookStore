@@ -18,22 +18,22 @@ namespace BookStore.Repository.Implementations
 
         public bcBookStoreContext _bcBookStoreContext { get => _context as bcBookStoreContext; }
 
-        //public IEnumerable BookByAuthor()
-        //{
-        //    return _bcBookStoreContext.Books.Include(a => a.Author)
-        //         .GroupBy(a => a.Author.Name)
-        //         .Select(grpAuthor => new { Author = grpAuthor.Key, Books = grpAuthor.Count() })
-        //         .OrderByDescending(a => a.Books)
-        //         .ToList();
-        //}
+        public IEnumerable BookByAuthor()
+        {
+            return _bcBookStoreContext.Book.Include(a => a.Author)
+                 .GroupBy(a => a.Author.Name)
+                 .Select(grpAuthor => new { Author = grpAuthor.Key, Books = grpAuthor.Count() })
+                 .OrderByDescending(a => a.Books)
+                 .ToList();
+        }
 
-        //public IEnumerable BookByCategory()
-        //{
-        //    return _bcBookStoreContext.Books.Include(a => a.Category)
-        //     .GroupBy(a => a.Category.Categ)
-        //     .Select(grpCateg => new { Category = grpCateg.Key, Books = grpCateg.Count() })
-        //     .OrderByDescending(a => a.Books)
-        //     .ToList();
-        //}
+        public IEnumerable BookByCategory()
+        {
+            return _bcBookStoreContext.Book.Include(a => a.Category)
+             .GroupBy(a => a.Category.Categ)
+             .Select(grpCateg => new { Category = grpCateg.Key, Books = grpCateg.Count() })
+             .OrderByDescending(a => a.Books)
+             .ToList();
+        }
     }
 }

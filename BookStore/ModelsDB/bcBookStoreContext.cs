@@ -21,8 +21,6 @@ namespace BookStore.ModelsDB
         {
         }
 
-
-        // ce sont des collections pour les utiliser au ajout/suppression/modification
         public virtual DbSet<Author> Author { get; set; }
         public virtual DbSet<Book> Book { get; set; }
         public virtual DbSet<Category> Category { get; set; }
@@ -32,7 +30,7 @@ namespace BookStore.ModelsDB
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["bookStoreDB"].ConnectionString);
-                  
+            
             }
         }
 
@@ -43,7 +41,7 @@ namespace BookStore.ModelsDB
                 entity.HasKey(e => e.IdAuthor)
                     .HasName("PK_AUTHOR");
 
-                entity.Property(e => e.IdAuthor).ValueGeneratedNever();
+                entity.Property(e => e.IdAuthor).HasDefaultValueSql("(newid())");
 
                 entity.Property(e => e.Email)
                     .IsRequired()
@@ -65,7 +63,7 @@ namespace BookStore.ModelsDB
                 entity.HasKey(e => e.IdBook)
                     .HasName("PK_BOOK");
 
-                entity.Property(e => e.IdBook).ValueGeneratedNever();
+                entity.Property(e => e.IdBook).HasDefaultValueSql("(newid())");
 
                 entity.Property(e => e.DescBook)
                     .IsRequired()
@@ -97,7 +95,7 @@ namespace BookStore.ModelsDB
                 entity.HasKey(e => e.IdCateg)
                     .HasName("PK_CATEGORY");
 
-                entity.Property(e => e.IdCateg).ValueGeneratedNever();
+                entity.Property(e => e.IdCateg).HasDefaultValueSql("(newid())");
 
                 entity.Property(e => e.Categ)
                     .IsRequired()

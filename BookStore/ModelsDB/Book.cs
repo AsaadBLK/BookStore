@@ -19,7 +19,6 @@ namespace BookStore.ModelsDB
         public double? Price { get; set; }
         public int? NbPages { get; set; }
 
-        // liaison avec l'entité
         public virtual Author Author { get; set; }
         public virtual Category Category { get; set; }
     }

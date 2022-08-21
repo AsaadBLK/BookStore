@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BookStore.Forms;
 
 namespace BookStore
 {
@@ -17,5 +18,13 @@ namespace BookStore
             InitializeComponent();
         }
 
+        private void Authorbtn_Click(object sender, EventArgs e)
+        {
+            AuthorsForm frmAuthor = new AuthorsForm();
+            frmAuthor.Dock=DockStyle.Fill;
+            panelcontenu.Controls.Clear();
+            panelcontenu.Controls.Add(frmAuthor);
+
+        }
     }
 }

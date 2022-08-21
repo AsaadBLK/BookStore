@@ -72,6 +72,7 @@
             this.Authorbtn.TabIndex = 0;
             this.Authorbtn.Text = "Author";
             this.Authorbtn.UseVisualStyleBackColor = true;
+            this.Authorbtn.Click += new System.EventHandler(this.Authorbtn_Click);
             // 
             // Bookbtn
             // 
