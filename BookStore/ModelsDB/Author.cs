@@ -11,7 +11,8 @@ namespace BookStore.ModelsDB
     {
         public Author()
         {
-            Book = new HashSet<Book>();
+            //change book to books
+            Books = new HashSet<Book>();
         }
 
         public Guid IdAuthor { get; set; }
@@ -19,6 +20,7 @@ namespace BookStore.ModelsDB
         public string Email { get; set; }
         public string Gender { get; set; }
 
-        public virtual ICollection<Book> Book { get; set; }
+        //change book par default to books
+        public virtual ICollection<Book> Books { get; set; }
     }
 }

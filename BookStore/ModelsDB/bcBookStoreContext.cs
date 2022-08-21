@@ -80,7 +80,8 @@ namespace BookStore.ModelsDB
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.Author)
-                    .WithMany(p => p.Book)
+                //change book to books
+                    .WithMany(p => p.Books)
                     .HasForeignKey(d => d.IdAuthor)
                     .HasConstraintName("FK_BOOK_ECRIT_PAR_AUTHOR");
 

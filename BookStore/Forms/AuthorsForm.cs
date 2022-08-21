@@ -45,20 +45,20 @@ namespace BookStore.Forms
         private void AuthorsForm_Load(object sender, EventArgs e)
         {
             //call unitofwork from implementations  ---  // instance bcbookstorecontext
-            //using (UnitOfWork uow = new UnitOfWork(new bcBookStoreContext()))
-            //{  // charge proprety books
-            //    dataGridView1.DataSource = uow.Authors.Find(null, "books")
-            //        .Select(p => new
-            //        {
-            //            idAuthor = p.IdAuthor,
-            //            Name = p.Name,
-            //            Gender = p.Gender,
-            //            nbBook=p.Book.Count()
-            //        }).ToList();
-                
-            //     dataGridView1.Columns["idAuthor"].Visible = false;
+            using (UnitOfWork uow = new UnitOfWork(new bcBookStoreContext()))
+            {  // charge proprety books
+                dataGridView1.DataSource = uow.Authors.Find(null, "Books")
+                    .Select(p => new
+                    {
+                        idAuthor = p.IdAuthor,
+                        Name = p.Name,
+                        Gender = p.Gender,
+                        nbBook = p.Books.Count()
+                    }).ToList();
 
-            //}
+                dataGridView1.Columns["idAuthor"].Visible = false;
+
+            }
         }
     }
 }
