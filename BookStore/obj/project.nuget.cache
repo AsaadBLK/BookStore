@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jiVnyehqTrn1MAc2IrkLdlpzpl5It5FJ+IuKAK7IOqQvAJXUTmgZEtygkXKxLIn4Uk30jmjQSqyGmgTgBQ3qhg==",
+  "dgSpecHash": "i6t7gHldD5SWjr8LKl6C4atlLDVxte4V7jm882GAVZpaiCaxPVWtJljoJ/zAfTzoaG0+G8ERdhctV8YsBkuzOQ==",
   "success": true,
   "projectFilePath": "D:\\netCore\\Projects\\BookStore\\BookStore\\BookStore.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Laptop\\.nuget\\packages\\linqkit.microsoft.entityframeworkcore\\3.1.23\\linqkit.microsoft.entityframeworkcore.3.1.23.nupkg.sha512",
     "C:\\Users\\Laptop\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Laptop\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\Laptop\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

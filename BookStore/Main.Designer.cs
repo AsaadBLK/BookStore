@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.Categorybtn = new System.Windows.Forms.Button();
+            this.Statisticbtn = new System.Windows.Forms.Button();
             this.Bookbtn = new System.Windows.Forms.Button();
             this.Authorbtn = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
@@ -40,7 +40,7 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panelLeft.Controls.Add(this.Categorybtn);
+            this.panelLeft.Controls.Add(this.Statisticbtn);
             this.panelLeft.Controls.Add(this.Bookbtn);
             this.panelLeft.Controls.Add(this.Authorbtn);
             this.panelLeft.Location = new System.Drawing.Point(3, 3);
@@ -48,14 +48,15 @@
             this.panelLeft.Size = new System.Drawing.Size(106, 449);
             this.panelLeft.TabIndex = 0;
             // 
-            // Categorybtn
+            // Statisticbtn
             // 
-            this.Categorybtn.Location = new System.Drawing.Point(9, 113);
-            this.Categorybtn.Name = "Categorybtn";
-            this.Categorybtn.Size = new System.Drawing.Size(84, 23);
-            this.Categorybtn.TabIndex = 2;
-            this.Categorybtn.Text = "Category";
-            this.Categorybtn.UseVisualStyleBackColor = true;
+            this.Statisticbtn.Location = new System.Drawing.Point(9, 113);
+            this.Statisticbtn.Name = "Statisticbtn";
+            this.Statisticbtn.Size = new System.Drawing.Size(84, 23);
+            this.Statisticbtn.TabIndex = 2;
+            this.Statisticbtn.Text = "Statistics";
+            this.Statisticbtn.UseVisualStyleBackColor = true;
+            this.Statisticbtn.Click += new System.EventHandler(this.Statisticbtn_Click);
             // 
             // Bookbtn
             // 
@@ -113,7 +114,7 @@
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Panel panelcontenu;
-        private System.Windows.Forms.Button Categorybtn;
+        private System.Windows.Forms.Button Statisticbtn;
         private System.Windows.Forms.Button Bookbtn;
         private System.Windows.Forms.Button Authorbtn;
     }

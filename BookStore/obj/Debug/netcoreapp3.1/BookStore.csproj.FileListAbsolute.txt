@@ -57,3 +57,5 @@ D:\netCore\Projects\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.Main.r
 D:\netCore\Projects\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.Properties.Resources.resources
 D:\netCore\Projects\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.Forms.BooksForms.resources
 D:\netCore\Projects\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.Forms.BookNewEditForm.resources
+D:\netCore\Projects\BookStore\BookStore\bin\Debug\netcoreapp3.1\LinqKit.Microsoft.EntityFrameworkCore.dll
+D:\netCore\Projects\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.Forms.StatisticsForm.resources

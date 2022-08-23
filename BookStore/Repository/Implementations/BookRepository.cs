@@ -20,6 +20,7 @@ namespace BookStore.Repository.Implementations
 
         public IEnumerable BookByAuthor()
         {
+            //get books by author
             return _bcBookStoreContext.Book.Include(a => a.Author)
                  .GroupBy(a => a.Author.Name)
                  .Select(grpAuthor => new { Author = grpAuthor.Key, Books = grpAuthor.Count() })
@@ -29,6 +30,7 @@ namespace BookStore.Repository.Implementations
 
         public IEnumerable BookByCategory()
         {
+            //get books by category
             return _bcBookStoreContext.Book.Include(a => a.Category)
              .GroupBy(a => a.Category.Categ)
              .Select(grpCateg => new { Category = grpCateg.Key, Books = grpCateg.Count() })

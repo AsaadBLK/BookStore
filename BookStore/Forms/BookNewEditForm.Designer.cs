@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtImageCover = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.combcat = new System.Windows.Forms.ComboBox();
@@ -42,14 +44,15 @@
             this.txtprice = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.updatebtn = new System.Windows.Forms.Button();
             this.bookbtnClick = new System.Windows.Forms.Button();
             this.txtdesc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txttitre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.errProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtImageCover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,7 +66,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.txtImageCover);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.combcat);
@@ -75,7 +79,6 @@
             this.groupBox1.Controls.Add(this.txtprice);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.updatebtn);
             this.groupBox1.Controls.Add(this.bookbtnClick);
             this.groupBox1.Controls.Add(this.txtdesc);
             this.groupBox1.Controls.Add(this.label3);
@@ -87,14 +90,24 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // pictureBox1
+            // label9
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pictureBox1.Location = new System.Drawing.Point(223, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(148, 114);
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(223, 192);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 15);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Image Path";
+            // 
+            // txtImageCover
+            // 
+            this.txtImageCover.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtImageCover.Location = new System.Drawing.Point(223, 37);
+            this.txtImageCover.Name = "txtImageCover";
+            this.txtImageCover.Size = new System.Drawing.Size(148, 114);
+            this.txtImageCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.txtImageCover.TabIndex = 21;
+            this.txtImageCover.TabStop = false;
             // 
             // dateTimePicker1
             // 
@@ -111,6 +124,7 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "upload";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // combcat
             // 
@@ -187,15 +201,6 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Published Date : ";
             // 
-            // updatebtn
-            // 
-            this.updatebtn.Location = new System.Drawing.Point(103, 323);
-            this.updatebtn.Name = "updatebtn";
-            this.updatebtn.Size = new System.Drawing.Size(84, 23);
-            this.updatebtn.TabIndex = 8;
-            this.updatebtn.Text = "Update";
-            this.updatebtn.UseVisualStyleBackColor = true;
-            // 
             // bookbtnClick
             // 
             this.bookbtnClick.Location = new System.Drawing.Point(103, 294);
@@ -204,6 +209,7 @@
             this.bookbtnClick.TabIndex = 7;
             this.bookbtnClick.Text = "Add book";
             this.bookbtnClick.UseVisualStyleBackColor = true;
+            this.bookbtnClick.Click += new System.EventHandler(this.bookbtnClick_Click);
             // 
             // txtdesc
             // 
@@ -237,6 +243,10 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Titre :";
             // 
+            // errProvider
+            // 
+            this.errProvider.ContainerControl = this;
+            // 
             // BookNewEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -246,9 +256,11 @@
             this.Controls.Add(this.label1);
             this.Name = "BookNewEditForm";
             this.Text = "BookNewEditForm";
+            this.Load += new System.EventHandler(this.BookNewEditForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtImageCover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,7 +279,6 @@
         private System.Windows.Forms.TextBox txtprice;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button updatebtn;
         private System.Windows.Forms.Button bookbtnClick;
         private System.Windows.Forms.TextBox txtdesc;
         private System.Windows.Forms.Label label3;
@@ -275,6 +286,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox txtImageCover;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ErrorProvider errProvider;
     }
 }

@@ -35,5 +35,14 @@ namespace BookStore
             panelcontenu.Controls.Add(frmBook);
 
         }
+
+        private void Statisticbtn_Click(object sender, EventArgs e)
+        {
+            StatisticsForm frmStat = new StatisticsForm();
+            frmStat.Dock = DockStyle.Fill;
+            panelcontenu.Controls.Clear();
+            panelcontenu.Controls.Add(frmStat);
+
+        }
     }
 }
