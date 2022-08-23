@@ -17,4 +17,12 @@
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <None Update="DataSets\DsAuthor.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="DataSets\ListOfBooks.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
 </Project>

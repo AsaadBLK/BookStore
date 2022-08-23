@@ -155,35 +155,35 @@ namespace BookStore.Forms
 
 
 
-                //if (colName == "print")
-                //{
-                //    using (UnitOfWork uow = new UnitOfWork(new bcBookStoreContext()))
-                //    {
-                //        Author author = uow.Authors.Find(a => a.IdAuthor == idAuthor, "Books").FirstOrDefault();
-                //        AuthorViewModel av = new AuthorViewModel()
-                //        {
-                //            IdAuthor = author.IdAuthor,
-                //            Name = author.Name,
-                //            Email = author.Email,
-                //            Gender = author.Gender,
-                //            nbBooks = author.Books.Count
-                //        };
-                //        DataTable dt = new DataTable();
-                //        var props = typeof(AuthorViewModel).GetProperties();
-                //        dt.Columns.AddRange(
-                //           props.Select(p => new DataColumn(p.Name, p.PropertyType)).ToArray()
-                //            );
-                //        dt.Rows.Add(props.Select(p => p.GetValue(av, null)).ToArray());
+                if (colName == "icons8-plugin-30")
+                {
+                    using (UnitOfWork uow = new UnitOfWork(new bcBookStoreContext()))
+                    {
+                        Author author = uow.Authors.Find(a => a.IdAuthor == idAuthor, "Books").FirstOrDefault();
+                        AuthorViewModel av = new AuthorViewModel()
+                        {
+                            IdAuthor = author.IdAuthor,
+                            Name = author.Name,
+                            Email = author.Email,
+                            Gender = author.Gender,
+                            nbBooks = author.Books.Count
+                        };
+                        DataTable dt = new DataTable();
+                        var props = typeof(AuthorViewModel).GetProperties();
+                        dt.Columns.AddRange(
+                           props.Select(p => new DataColumn(p.Name, p.PropertyType)).ToArray()
+                            );
+                        dt.Rows.Add(props.Select(p => p.GetValue(av, null)).ToArray());
 
-                //        string RptPath = @"Reports\ListAuthors.rdlc";
-                //        string NameSrcRpt = "ds_listAuthors";
+                        string RptPath = @"Reports\ListAuthors.rdlc";
+                        string NameSrcRpt = "ds_listAuthors";
 
-                //        string fileName = "ListAuthors";
-                //        PrintToPDF(RptPath, NameSrcRpt, dt, fileName, true);
+                        string fileName = "ListAuthors";
+                        PrintToPDF(RptPath, NameSrcRpt, dt, fileName, true);
 
-                //        }
+                    }
 
-                //    }
+                }
 
                 //end dataGridView1_CellContentClick method
 

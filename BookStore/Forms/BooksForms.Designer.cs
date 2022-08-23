@@ -46,6 +46,7 @@
             this.nextbtn = new System.Windows.Forms.Button();
             this.lastbtn = new System.Windows.Forms.Button();
             this.txtcurrentpage = new System.Windows.Forms.Label();
+            this.btnprint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -221,10 +222,21 @@
             this.txtcurrentpage.TabIndex = 18;
             this.txtcurrentpage.Text = "...";
             // 
+            // btnprint
+            // 
+            this.btnprint.Location = new System.Drawing.Point(761, 9);
+            this.btnprint.Name = "btnprint";
+            this.btnprint.Size = new System.Drawing.Size(89, 23);
+            this.btnprint.TabIndex = 19;
+            this.btnprint.Text = "Print PDF";
+            this.btnprint.UseVisualStyleBackColor = true;
+            this.btnprint.Click += new System.EventHandler(this.btnprint_Click);
+            // 
             // BooksForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnprint);
             this.Controls.Add(this.txtcurrentpage);
             this.Controls.Add(this.lastbtn);
             this.Controls.Add(this.nextbtn);
@@ -267,5 +279,6 @@
         private System.Windows.Forms.Button nextbtn;
         private System.Windows.Forms.Button lastbtn;
         private System.Windows.Forms.Label txtcurrentpage;
+        private System.Windows.Forms.Button btnprint;
     }
 }

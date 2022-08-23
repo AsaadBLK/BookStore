@@ -14,6 +14,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.17" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +22,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="DataSets\DsAuthor.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DsAuthor.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\ListOfBooks.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ListOfBooks.xsd</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -33,6 +44,29 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DataSets\DsAuthor.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsAuthor.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSets\ListOfBooks.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListOfBooks.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Reports\BookDetail.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Reports\ListAuthors.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Reports\AuthorSubReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Reports\ListofBooks.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
