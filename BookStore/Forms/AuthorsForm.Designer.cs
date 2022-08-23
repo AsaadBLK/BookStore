@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.updatebtn = new System.Windows.Forms.Button();
             this.AuthorbtnClick = new System.Windows.Forms.Button();
             this.Gf = new System.Windows.Forms.RadioButton();
             this.Gm = new System.Windows.Forms.RadioButton();
@@ -40,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nbauthors = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +57,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.updatebtn);
             this.groupBox1.Controls.Add(this.AuthorbtnClick);
             this.groupBox1.Controls.Add(this.Gf);
             this.groupBox1.Controls.Add(this.Gm);
@@ -68,6 +71,16 @@
             this.groupBox1.Size = new System.Drawing.Size(200, 385);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // updatebtn
+            // 
+            this.updatebtn.Location = new System.Drawing.Point(64, 199);
+            this.updatebtn.Name = "updatebtn";
+            this.updatebtn.Size = new System.Drawing.Size(84, 23);
+            this.updatebtn.TabIndex = 8;
+            this.updatebtn.Text = "Update";
+            this.updatebtn.UseVisualStyleBackColor = true;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
             // 
             // AuthorbtnClick
             // 
@@ -160,11 +173,24 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(633, 373);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView1.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseEnter);
+            // 
+            // nbauthors
+            // 
+            this.nbauthors.AutoSize = true;
+            this.nbauthors.Location = new System.Drawing.Point(317, 13);
+            this.nbauthors.Name = "nbauthors";
+            this.nbauthors.Size = new System.Drawing.Size(17, 15);
+            this.nbauthors.TabIndex = 4;
+            this.nbauthors.Text = "__";
             // 
             // AuthorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.nbauthors);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
@@ -194,5 +220,7 @@
         private System.Windows.Forms.Button AuthorbtnClick;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label nbauthors;
+        private System.Windows.Forms.Button updatebtn;
     }
 }

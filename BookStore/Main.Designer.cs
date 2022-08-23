@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.Categorybtn = new System.Windows.Forms.Button();
+            this.Bookbtn = new System.Windows.Forms.Button();
+            this.Authorbtn = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
             this.panelcontenu = new System.Windows.Forms.Panel();
-            this.Authorbtn = new System.Windows.Forms.Button();
-            this.Bookbtn = new System.Windows.Forms.Button();
-            this.Categorybtn = new System.Windows.Forms.Button();
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +47,35 @@
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(106, 449);
             this.panelLeft.TabIndex = 0;
+            // 
+            // Categorybtn
+            // 
+            this.Categorybtn.Location = new System.Drawing.Point(9, 113);
+            this.Categorybtn.Name = "Categorybtn";
+            this.Categorybtn.Size = new System.Drawing.Size(84, 23);
+            this.Categorybtn.TabIndex = 2;
+            this.Categorybtn.Text = "Category";
+            this.Categorybtn.UseVisualStyleBackColor = true;
+            // 
+            // Bookbtn
+            // 
+            this.Bookbtn.Location = new System.Drawing.Point(9, 84);
+            this.Bookbtn.Name = "Bookbtn";
+            this.Bookbtn.Size = new System.Drawing.Size(84, 23);
+            this.Bookbtn.TabIndex = 1;
+            this.Bookbtn.Text = "Book";
+            this.Bookbtn.UseVisualStyleBackColor = true;
+            this.Bookbtn.Click += new System.EventHandler(this.Bookbtn_Click);
+            // 
+            // Authorbtn
+            // 
+            this.Authorbtn.Location = new System.Drawing.Point(9, 55);
+            this.Authorbtn.Name = "Authorbtn";
+            this.Authorbtn.Size = new System.Drawing.Size(84, 23);
+            this.Authorbtn.TabIndex = 0;
+            this.Authorbtn.Text = "Author";
+            this.Authorbtn.UseVisualStyleBackColor = true;
+            this.Authorbtn.Click += new System.EventHandler(this.Authorbtn_Click);
             // 
             // panelTop
             // 
@@ -63,34 +92,6 @@
             this.panelcontenu.Name = "panelcontenu";
             this.panelcontenu.Size = new System.Drawing.Size(856, 392);
             this.panelcontenu.TabIndex = 2;
-            // 
-            // Authorbtn
-            // 
-            this.Authorbtn.Location = new System.Drawing.Point(9, 55);
-            this.Authorbtn.Name = "Authorbtn";
-            this.Authorbtn.Size = new System.Drawing.Size(84, 23);
-            this.Authorbtn.TabIndex = 0;
-            this.Authorbtn.Text = "Author";
-            this.Authorbtn.UseVisualStyleBackColor = true;
-            this.Authorbtn.Click += new System.EventHandler(this.Authorbtn_Click);
-            // 
-            // Bookbtn
-            // 
-            this.Bookbtn.Location = new System.Drawing.Point(9, 84);
-            this.Bookbtn.Name = "Bookbtn";
-            this.Bookbtn.Size = new System.Drawing.Size(84, 23);
-            this.Bookbtn.TabIndex = 1;
-            this.Bookbtn.Text = "Book";
-            this.Bookbtn.UseVisualStyleBackColor = true;
-            // 
-            // Categorybtn
-            // 
-            this.Categorybtn.Location = new System.Drawing.Point(9, 113);
-            this.Categorybtn.Name = "Categorybtn";
-            this.Categorybtn.Size = new System.Drawing.Size(84, 23);
-            this.Categorybtn.TabIndex = 2;
-            this.Categorybtn.Text = "Category";
-            this.Categorybtn.UseVisualStyleBackColor = true;
             // 
             // Main
             // 

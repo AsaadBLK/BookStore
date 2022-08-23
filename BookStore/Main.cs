@@ -26,5 +26,14 @@ namespace BookStore
             panelcontenu.Controls.Add(frmAuthor);
 
         }
+
+        private void Bookbtn_Click(object sender, EventArgs e)
+        {
+            BooksForms frmBook = new BooksForms();
+            frmBook.Dock = DockStyle.Fill;
+            panelcontenu.Controls.Clear();
+            panelcontenu.Controls.Add(frmBook);
+
+        }
     }
 }
